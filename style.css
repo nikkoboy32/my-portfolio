@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Roboto Slab", serif;
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-one: #c5dff8;
+  --color-two: #a0bfe0;
+  --color-three: #7895cb;
+  --color-four: #4a55a2;
+  --black: #000;
+  --white: #fff;
+  --gray: #f9f9f9;
+  --dark: #2d2e32;
+}
+header {
+  min-height: 100vh;
+  background-color: var(--color-one);
+  width: 100%;
+}
+.nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-toggle {
+  display: none;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.1rem;
+}
+ul li a:hover {
+  color: var(--color-four);
+}
+.fixed-nav {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+}
+ul li a::after {
+  content: "";
+  height: 3px;
+  background-color: var(--color-four);
+  display: block;
+  transition: 0.3s;
+  width: 0;
+  margin: 5px 0px;
+}
+
+ul li a:hover::after {
+  width: 100%;
+}
+li .active {
+  color: var(--color-four);
+}
+.logo a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+.logo .portfolio {
+  color: var(--color-four);
+}
+.links-container ul li {
+  display: inline-block;
+  margin: 0px 15px;
+}
+.about-me-container {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  place-items: center;
+  min-height: 100vh;
+}
+.my-image {
+  min-width: 60%;
+  text-align: center;
+}
+.my-image img {
+  width: 60%;
+  border-radius: 100%;
+}
+.about-me-content h1 {
+  font-size: 3rem;
+}
+.name {
+  color: var(--color-four);
+}
+.about-me-content p {
+  margin: 20px 0px;
+  font-size: 1.2rem;
+}
+.resume-btn {
+  padding: 10px;
+  border: none;
+  background: linear-gradient(var(--color-three), var(--color-four));
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.resume-btn:hover {
+  background: #80bbf1;
+  color: #000;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.section-about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  place-content: center;
+  width: 70vw;
+  margin: auto;
+  min-height: 80vh;
+}
+.resume-section {
+  background-color: var(--gray);
+  padding: 30px 0px;
+}
+.resume-container {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 70vw;
+  margin: auto;
+  min-height: 80vh;
+  text-align: center;
+}
+.contact-container {
+  display: grid;
+  width: 70vw;
+  margin: auto;
+  min-height: 30vh;
+}
+.contact-section {
+  padding: 50px;
+}
+.contact-container h2 {
+  color: var(--color-four);
+}
+.contact-container h3 {
+  font-size: 1.5rem;
+}
+.resume-container img {
+  margin: 15px 0px;
+}
+.section-about-content h2 {
+  color: var(--color-four);
+}
+.section-about-content h3 {
+  margin: 15px 0px;
+  font-size: 1.8rem;
+}
+.about-img img {
+  border-radius: 40%;
+}
+.footer {
+  background-color: var(--dark);
+  padding: 50px;
+}
+.footer-container {
+  width: 70vw;
+  margin: auto;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 400px) {
+  .about-me-container {
+    grid-template-columns: 1fr;
+  }
+  .about-me-content {
+    text-align: center;
+    margin: 30px 0px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav-toggle {
+    display: block;
+    font-size: 20px;
+  }
+  .links-container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-y: hidden;
+    padding: 0px 15px;
+    height: 0;
+    transition: 0.3s;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .links-container ul li {
+    display: block;
+    margin: 8px 0px;
+  }
+  .my-image {
+    min-width: 100%;
+    text-align: center;
+  }
+  .my-image img {
+    min-width: 100%;
+    border-radius: 100%;
+  }
+  .about-me-content h1 {
+    font-size: 2.3rem;
+  }
+  .about-me-container {
+    gap: 20px;
+  }
+  .section-about-container {
+    grid-template-columns: 1fr;
+  }
+  .about-img img,
+  .resume-container img {
+    max-width: 100%;
+  }
+  .about-img,
+  .resume-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .resume-section {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .links-container {
+    height: 0 !important;
+    align-items: center;
+    display: flex;
+    padding: 20px 0px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .section-about-container {
+    grid-template-columns: 1fr;
+  }
+}
